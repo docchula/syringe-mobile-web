@@ -1,75 +1,89 @@
 ---
-import '../styles/main.css'
+import "../styles/main.css";
 
-const heading = "Party Banner";
-const subheading = "Airplay custom animated banners to your TV and elevate any celebration.";
-const appIcon = "/images/app-icon.svg";
+const heading = "Syringe Games";
+const subheading =
+  "Guidance? Foods? Worried about missing event details? Download this app now! 💕 Everything you need, all in one app!";
+const appIcon = "/images/app-icon.png";
 const appScreenshot = "/images/app-screenshot.png";
-const footerImage = "/images/banners.svg";
 const badges = [
-	{
-		link: "https://apps.apple.com/us/app/party-banner/id1610931185",
-		image: "/images/app-store-badge.svg"
-	},
-	{
-		link: "https://apps.apple.com/us/app/party-banner/id1610931185",
-		image: "/images/google-play-badge.png"
-	},
+  {
+    link: "https://apps.apple.com/th/app/syringe-games/id6736658220",
+    image: "/images/app-store-badge.svg",
+  },
+  {
+    link: "https://play.google.com/store/apps/details?id=com.docchula.syringeGames&pcampaignid=web_share",
+    image: "/images/google-play-badge.png",
+  },
 ];
-const authors = [
-	{
-		name: "Will Walker",
-		url: "https://willswire.com"
-	},
-	{
-		name: "Caden Kulp",
-		url: "https://cadens.studio"
-	},
+
+const contacts = [
+  {
+    name: "Facebook",
+    label: "34th Syringe Games",
+    link: "https://www.facebook.com/people/34th-Syringe-Games/100089421965360/",
+  },
+  {
+    name: "Instagram",
+    label: "@34th_syringe",
+    link: "https://www.instagram.com/34th_syringe/",
+  },
+  {
+    name: "TikTok",
+    label: "@34th_syringe",
+    link: "https://www.tiktok.com/@34th_syringe",
+  },
 ];
-const pageTitle = "App Showcase"
-const favicon = "/images/favicon.svg"
+
+const pageTitle = "App Showcase";
+const favicon = "/images/favicon.ico";
+const today = new Date();
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href={favicon} />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<div class="container">
-			<main>
-				<div class="text-container">
-					<img src={appIcon} class="app-icon">
-					<h1 class="heading">{heading}</h1>
-					<h2 class="subheading">{subheading}</h2>
-					<div class="badge-container">
-						{badges.map(badge => (
-							<div>
-								<a href={badge.link} target="_blank">
-									<img src={badge.image} class="badge" />
-								</a>
-							</div>
-						))}
-					</div>
-					<p class="authors">Made with &#x2665; by 
-						{authors.map((author, index) => (
-								<span>
-									{index > 0 ? (index === authors.length - 1 ? ' and ' : ', ') : ''}
-									<a href={author.url} target="_blank">{author.name}</a>
-								</span>
-						))}
-					</p>
-				</div>
-				<div>
-					<img src={appScreenshot} class="app-screenshot">
-				</div>
-			</main>
-			<footer>
-				<img src={footerImage} class="footer-image">
-			</footer>
-		</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href={favicon} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <div class="text-container">
+          <img src={appIcon} class="app-icon" />
+          <h1 class="heading">{heading}</h1>
+          <h2 class="subheading">{subheading}</h2>
+          <div class="badge-container">
+            {
+              badges.map((badge) => (
+                <div>
+                  <a href={badge.link} target="_blank">
+                    <img src={badge.image} class="badge" />
+                  </a>
+                </div>
+              ))
+            }
+          </div>
+          <p class="authors">Made with &#x2665; by IT Division of SMCU</p>
+        </div>
+        <div>
+          <img src={appScreenshot} class="app-screenshot" />
+        </div>
+      </main>
+      <footer>
+        &copy; {today.getFullYear()} Docchula. All rights reserved.
+        <div class="social-links">
+          {
+            contacts.map((contact) => (
+              <a href={contact.link} target="_blank">
+                <span class="sr-only">Follow on {contact.name}</span>
+              </a>
+            ))
+          }
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
