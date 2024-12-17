@@ -1,7 +1,7 @@
-# Mobile App Showcase Astro Theme
-<img width="1920" alt="pb-rounded" src="https://github.com/cadensstudio/app-showcase/assets/54109914/d76cbfb7-b5e0-4298-84f8-648753629ff6">
+# Syringe Games Portal Website
 
-This theme is a fully responsive and customizable landing page for showcasing mobile apps. Built with Astro, it utilizes simple HTML and CSS for design and layout, ensuring simplicity and speed. Ideal for developers and designers looking for a lightweight starting point to promote their app.
+
+![App Screenshot](https://github.com/user-attachments/assets/f73dbd30-1aaf-4be9-ad67-c21418a42475)
 
 ## Features
 
@@ -9,15 +9,10 @@ This theme is a fully responsive and customizable landing page for showcasing mo
 - **Fully Customizable**: Customize every element of the theme including fonts, images, and text by simple edits.
 - **Responsive Design**: Ensures your app looks stunning on both desktop and mobile devices.
 
-## Usage
-
-To begin using this theme for your mobile app landing page, we recommend taking advantage of the GitHub "Use this template" feature, located above the Clone button. This will allow you to create a separate repository where you can customize the theme as you wish.
-
 ## Getting Started
 
-1. Create a new repository by clicking "Use this template".
-2. Navigate to the project directory and install dependencies with `npm install`.
-3. Start the development server with `npm start`.
+1. Navigate to the project directory and install dependencies with `pnpm install`.
+2. Start the development server with `pnpm start`.
 
 ## Customization Guide
 
@@ -47,5 +42,3 @@ Add new font files to `/public/fonts` and reference them in `/src/styles/main.cs
 ## Deployment
 
 This theme can be deployed on any static site hosting service that supports Astro. Follow the hosting provider's instructions for deploying an Astro project.
-
-To view a live version of this site, see https://partybanner.app.
