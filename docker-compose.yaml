@@ -12,11 +12,11 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.syringe-mobile-web-http.rule=Host(`syringeapp.docchula.com`)"
       - "traefik.http.routers.syringe-mobile-web-http.entrypoints=web"
-      - "traefik.http.services.syringe-mobile-web-http.loadbalancer.server.port=80"
+      - "traefik.http.services.syringe-mobile-web-http.loadbalancer.server.port=8080"
       - "traefik.http.routers.syringe-mobile-web-https.rule=Host(`syringeapp.docchula.com`)"
       - "traefik.http.routers.syringe-mobile-web-https.entrypoints=websecure"
       - "traefik.http.routers.syringe-mobile-web-https.tls.certresolver=leresolver"
-      - "traefik.http.services.syringe-mobile-web-https.loadbalancer.server.port=80"
+      - "traefik.http.services.syringe-mobile-web-https.loadbalancer.server.port=8080"
     deploy:
       resources:
         limits:
