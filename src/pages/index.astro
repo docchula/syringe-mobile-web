@@ -10,10 +10,14 @@ const badges = [
   {
     link: "https://apps.apple.com/th/app/syringe-games/id6736658220",
     image: "/images/app-store-badge.svg",
+    alt: "App Store Badge",
+    ariaLabel: "App Store Link",
   },
   {
     link: "https://play.google.com/store/apps/details?id=com.docchula.syringeGames&pcampaignid=web_share",
     image: "/images/google-play-badge.svg",
+    alt: "Google Play Badge",
+    ariaLabel: "Google Play Link",
   },
 ];
 
@@ -46,21 +50,22 @@ const today = new Date();
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Syringe Games Application Portal">
     <title>{pageTitle}</title>
   </head>
   <body>
     <div class="container">
       <main>
         <div class="text-container">
-          <img src={appIcon} class="app-icon" />
+          <img src={appIcon} width={80} height={80} alt="App Icon" class="app-icon" />
           <h1 class="heading">{heading}</h1>
           <h2 class="subheading">{subheading}</h2>
           <div class="badge-container">
             {
               badges.map((badge) => (
                 <div>
-                  <a href={badge.link} target="_blank">
-                    <img src={badge.image} class="badge" />
+                  <a href={badge.link} aria-label={badge.ariaLabel} target="_blank">
+                    <img src={badge.image} alt={badge.alt} class="badge" />
                   </a>
                 </div>
               ))
@@ -69,7 +74,7 @@ const today = new Date();
           <p class="authors">Made with &#x2665; by IT Division of SMCU</p>
         </div>
         <div>
-          <img src={appScreenshot} class="app-screenshot" />
+          <img src={appScreenshot} width={220} height={1080 / 529 * 220} alt="App Screenshot" class="app-screenshot" />
         </div>
       </main>
       <footer>
