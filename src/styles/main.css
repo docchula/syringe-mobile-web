@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Titan One';
+  font-family: 'Sigmar One';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/Titan_One_regular.woff2') format('woff2');
+  src: url('/fonts/SigmarOne_Regular.ttf');
 }
 
 :root {
@@ -101,7 +101,7 @@ main {
 }
 
 .heading {
-  font-family: 'Titan One', sans-serif;
+  font-family: 'Sigmar One', sans-serif;
   color: var(--accent);
   margin-bottom: 16px;
 }
