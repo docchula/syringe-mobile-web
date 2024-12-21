@@ -42,3 +42,7 @@ Add new font files to `/public/fonts` and reference them in `/src/styles/main.cs
 ## Deployment
 
 This theme can be deployed on any static site hosting service that supports Astro. Follow the hosting provider's instructions for deploying an Astro project.
+
+## Developers
+
+- MDCU78: Ittipat Thanabodikarn
