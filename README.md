@@ -1,9 +1,12 @@
 # Syringe Games Portal Website
 
-
 ![App Screenshot](https://github.com/user-attachments/assets/f73dbd30-1aaf-4be9-ad67-c21418a42475)
 
 ## Features
+
+This website was built with [high performance](https://pagespeed.web.dev/analysis/https-syringeapp-docchula-com/0jpi5kznz8?form_factor=mobile) in mind to ensure fast loading even on slow internet connections.
+
+![PageSpeed Insights](https://github.com/user-attachments/assets/7f307204-87d7-476e-b8bb-4943a549d1cc)
 
 - **No Dependencies**: Apart from Astro, this theme does not use any external dependencies.
 - **Fully Customizable**: Customize every element of the theme including fonts, images, and text by simple edits.
