@@ -3,23 +3,10 @@ import "../styles/main.css";
 
 const heading = "Syringe Games";
 const subheading =
-  "Guidance? Foods? Worried about missing event details? Download this app now! 💕 Everything you need, all in one app!";
+  "Thank you for being part of Syringe Games! 💕 The event has come to an end, and the Syringe Games app is now officially closed.";
+
 const appIcon = "/images/app-icon.webp";
 const appScreenshot = "/images/app-screenshot.webp";
-const badges = [
-  {
-    link: "https://apps.apple.com/th/app/syringe-games/id6736658220",
-    image: "/images/app-store-badge.svg",
-    alt: "App Store Badge",
-    ariaLabel: "App Store Link",
-  },
-  {
-    link: "https://play.google.com/store/apps/details?id=com.docchula.syringeGames&pcampaignid=web_share",
-    image: "/images/google-play-badge.svg",
-    alt: "Google Play Badge",
-    ariaLabel: "Google Play Link",
-  },
-];
 
 const contacts = [
   {
@@ -50,7 +37,10 @@ const today = new Date();
     <link rel="icon" type="image/svg+xml" href={favicon} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="Syringe Games Application Portal">
+    <meta
+      name="description"
+      content="Thank you for being part of Syringe Games! The app is now officially closed."
+    />
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -60,17 +50,6 @@ const today = new Date();
           <img src={appIcon} width={80} height={80} alt="App Icon" class="app-icon" />
           <h1 class="heading">{heading}</h1>
           <h2 class="subheading">{subheading}</h2>
-          <div class="badge-container">
-            {
-              badges.map((badge) => (
-                <div>
-                  <a href={badge.link} aria-label={badge.ariaLabel} target="_blank">
-                    <img src={badge.image} alt={badge.alt} class="badge" />
-                  </a>
-                </div>
-              ))
-            }
-          </div>
           <p class="authors">Made with &#x2665; by IT Division of SMCU</p>
         </div>
         <div>
@@ -82,7 +61,7 @@ const today = new Date();
         <div class="social-links">
           {
             contacts.map((contact) => (
-              <a href={contact.link} target="_blank">
+              <a href={contact.link} target="_blank" rel="noopener noreferrer">
                 <span class="sr-only">Follow on {contact.name}</span>
               </a>
             ))
